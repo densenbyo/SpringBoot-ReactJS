@@ -39,7 +39,7 @@ public class FlashcardDeck extends AbstractClass {
     private List<Flashcard> flashcards;
 
     @OneToOne
-    @JsonView(Views.Internal.class)
+    @JsonIgnore
     private User creator;
 
     public FlashcardDeck() {

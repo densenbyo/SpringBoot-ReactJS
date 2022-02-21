@@ -33,17 +33,7 @@ public class FlashcardDeckDao extends BaseDao<FlashcardDeck> {
                     .setParameter("id", id)
                     .getSingleResult();
         } catch (RuntimeException e){
-            return null;
-        }
-    }
-
-    public List<FlashcardDeck> findPublic(){
-        try {
-            return em.createQuery(
-                            "SELECT f FROM FlashcardDeck f WHERE f.isRemoved = false AND f.isPublic = true", FlashcardDeck.class)
-                    .getResultList();
-        } catch (NoResultException e) {
-            throw new NoResultException("Not Found");
+            throw new PersistenceException(e);
         }
     }
 }

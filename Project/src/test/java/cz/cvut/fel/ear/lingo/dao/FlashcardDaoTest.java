@@ -1,4 +1,3 @@
-/*
 package cz.cvut.fel.ear.lingo.dao;
 
 import cz.cvut.fel.ear.lingo.Generator;
@@ -112,4 +111,3 @@ public class FlashcardDaoTest {
     }
 
 }
-*/

@@ -27,7 +27,6 @@ public class FlashcardController {
     private final FlashcardService fService;
     private final RepoService rService;
 
-
     @Autowired
     public FlashcardController(FlashcardService fService, RepoService rService){
         this.fService = fService;

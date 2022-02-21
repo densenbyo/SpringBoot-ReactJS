@@ -114,13 +114,6 @@ public class Flashcard extends AbstractClass {
         this.creator = creator;
     }
 
-    public void addFlashcardProgress(FlashcardProgress flashcardProgress) {
-        Objects.requireNonNull(flashcardProgress);
-        if (flashcardProgresses == null)
-            flashcardProgresses = new ArrayList<>();
-        flashcardProgresses.add(flashcardProgress);
-    }
-
     public void addContent(AbstractContent abstractContent){
         Objects.requireNonNull(abstractContent);
         if (contents == null)
@@ -137,9 +130,7 @@ public class Flashcard extends AbstractClass {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         Flashcard flashcard = (Flashcard) o;
-
         if (isRemoved != flashcard.isRemoved) return false;
         if (!Objects.equals(word, flashcard.word)) return false;
         if (!Objects.equals(translation, flashcard.translation))

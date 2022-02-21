@@ -57,11 +57,11 @@ public class Generator {
         );
     }
 
-    /*public static Flashcard generateFlashcard(User user) {
+    public static Flashcard generateFlashcard(User user) {
         return new Flashcard(
                 "name" + RAND.nextInt(100),
                 "translation" + RAND.nextInt(100),
                 generateUser()
         );
-    }*/
+    }
 }
